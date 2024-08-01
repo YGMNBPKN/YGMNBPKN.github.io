@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>FOR MY DEAR LCC 2 | Birthday Gift</title>
+    <meta name="author" content="LCC" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/1.jpg" />
+   
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>一份来自ZMM的礼物正在向您飞来</p>
+                    <!-- <img src="/images/11.gif" /> -->
+                    <!-- <img src="D:\git\git_cunchu\MyHexo\themes\hexo-theme-particlex\source\images\11.jpg"/> -->
+                  
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BIRTHDAY GIFT</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BIRTHDAY GIFT</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>FOR MY DEAR LCC 2</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/8/3
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%95%85%E4%BA%8B%E7%BB%AD%E7%AF%87/" style="color: #ffa2c4">
+                    故事续篇
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <hr>
+<p>#<strong>一些子可爱照片留存</strong><br><br></p>
+<p>###嘻嘻嘻<br><br></p>
+<center><font color="#660000"> <font size="5">闻花香</font></font></center>
+<center><img src="/2024/08/03/post2/6.jpg" class title="花花"></center>
+<center><font color="#660000"> <font size="5">啊哈古早视频截图</font></font></center>
+
+<center><img src="/2024/08/03/post2/5.jpg" class title="啊哈是古早视频截图"></center>
+<center><font color="#660000"> <font size="5">一些可爱的身影</font></font></center>
+
+<center><img src="/2024/08/03/post2/3.jpg" class title="可爱子"></center>
+<center><font color="#660000"> <font size="5">两个小啾啾</font></font></center>
+
+<center><img src="/2024/08/03/post2/7.jpg" class title="啾啾"></center>
+<center><font color="#660000"> <font size="5">跑步比心心</font></font></center>
+
+<center><img src="/2024/08/03/post2/4.jpg" class title="奔跑比心"></center>
+
+<center><font color="#660000"> <font size="5">达拉达拉达拉啦啦啦啦啦啦啦啦啦啦回家合影</font></font></center>
+
+<center><img src="/2024/08/03/post2/2.jpg" class title="赛罕合影"></center>
+<center><font color="#660000"> <font size="5">还有亲爱的小来福，福气多多</font></font></center>
+
+
+<center><img src="/2024/08/03/post2/11.jpg" class title="小来福"></center>
+<center><font color="#660000"> <font size="5">and 雨中逢花</font></font></center>
+
+<center><img src="/2024/08/03/post2/10.jpg" class title="雨中逢花"></center>
+
+<hr>
+<p>#<strong>一些子寄语</strong><br><br></p>
+<center><font color="#660000"> <font size="5">新的一岁心旷神怡，做一个开朗明媚的女孩子哦|</font></font></center>
+<center><img src="/2024/08/03/post2/26.jpg" class title="花花"></center>
+<center><font color="#660000"> <font size="5">这是小红书上给女儿的话哈哈哈哈哈</font></font></center>
+<center><img src="/2024/08/03/post2/27.jpg" class title="花花"></center>
+<center><font color="#660000"> <font size="5"></font></font></center>
+<center><img src="/2024/08/03/post2/28.jpg" class title="花花"></center>
+<center><font color="#660000"> <font size="5">要一起去旅游啊！看看这大千世界美丽旷野</font></font></center>
+<center><img src="/2024/08/03/post2/19.jpg" class title="花花"></center>
+<center><font color="#660000"> <font size="5">深深的话我们浅浅的说，最后的最后</font></font></center>
+<center><img src="/2024/08/03/post2/17.jpg" class title="花花"></center>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2024 - 2024 Birthday Gift
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;LCC
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
